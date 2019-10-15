@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Virtusa | Declarations</title>
+<link type="text/css" rel="stylesheet" href="../static/styles/template.css" th:href="@{/styles/template.css}">
+<link type="text/css" rel="stylesheet" href="../static/styles/resetPasswd.css" th:href="@{/styles/resetPasswd.css}">
+</head>
+<body>
+	<!-- ASIDE FOR SIDE BAR  -->
+	<aside>
+		<h2>Hai!</h2>
+		<h2>[[${employeId}]]</h2>
+		<hr>
+		<ul>
+			<li><a href="/home">HOME</a></li>
+			<li><a href="/profile">PROFILE</a></li>
+			<li><a href="/editProfile">EDIT PROFILE</a></li>
+			<li><a href="/payslip">PAYSLIP</a></li>
+			<li><a href="/mboPayout">MBO PAYOUT</a></li>
+			<li><a href="/resetPassword">CHANGE PASSWORD</a></li>
+		</ul>
+	</aside>
+	<!-- SIDE BAR ENDED -->
+
+
+	<section>
+		<!-- HEADER FOR NAV BAR -->
+		<nav>
+			<img href="../static/images/virtusa-logo.png" th:src="@{/images/virtusa-logo.png}">
+			<p>
+				<a href="/declaration"><span>Forms</span></a><a href="/logout"><span>Log
+						out</span></a>
+			</p>
+		</nav>
+		<!-- NAV BAR ENDED -->
+
+		<!-- SECTION FOR CONTENT -->
+		<div class="content">
+			<fieldset>
+				<legend>
+					<h3>Payroll</h3>
+				</legend>
+
+
+				<br> <br> <br>
+				<center>
+					<h2>Forms</h2>
+				</center>
+				<br>
+
+
+				<table align='center' width=600px>
+					<tr>
+
+						<th><center>Form Type</center></th>
+						<th><center>Download Form</center></th>
+					</tr>
+					<tr>
+						<td><center>Investment Declaration Form</center></td>
+						<td>
+							<center>
+								<a href="forms/investment_declaration.pdf" download><input
+									type="button" class="btn" value="Download"></a>
+							</center>
+						</td>
+					</tr>
+					<tr>
+						<td><center>Medical Reimbursement Form</center></td>
+						<td><center>
+								<a href="forms/Medical.pdf" download><input
+									type="button" class="btn" value="Download"></a>
+							</center></td>
+					</tr>
+
+					<tr>
+						<td><center>Telephone Reimbursement Form</center></td>
+						<td><center>
+								<a href="forms/telephone.pdf" download><input
+									type="button" class="btn" value="Download"></a>
+							</center></td>
+					</tr>
+
+				</table>
+
+
+
+			</fieldset>
+		</div>
+		<!-- SECTION ENDED -->
+	</section>
+</body>
+</html>

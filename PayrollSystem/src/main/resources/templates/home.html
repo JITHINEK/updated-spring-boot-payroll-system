@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Virtusa | Home</title>
+<link type="text/css" rel="stylesheet" href="../static/styles/template.css" th:href="@{/styles/template.css}">
+<link type="text/css" rel="stylesheet" href="../static/styles/home.css" th:href="@{/styles/home.css}">
+</head>
+</head>
+<body>
+	<!-- ASIDE FOR SIDE BAR  -->
+	<aside>
+		<h2>Hai!</h2>
+		<h2>[[${employeId}]]</h2>
+		<hr>
+		<ul>
+			<li><a href="/home">HOME</a></li>
+			<li><a href="/profile">PROFILE</a></li>
+			<li><a href="/editProfile">EDIT PROFILE</a></li>
+			<li><a href="/payslip">PAYSLIP</a></li>
+			<li><a href="/mboPayout">MBO PAYOUT</a></li>
+			<li><a href="/resetPassword">CHANGE PASSWORD</a></li>
+		</ul>
+	</aside>
+	<!-- SIDE BAR ENDED -->
+
+
+	<section>
+		<!-- HEADER FOR NAV BAR -->
+		<nav>
+		
+			<img href="../static/images/virtusa-logo.png" th:src="@{/images/virtusa-logo.png}">
+			<p>
+				<a href="/declaration"><span>Forms</span></a><a href="/logout"><span>Log
+						out</span></a>
+			</p>
+		</nav>
+		<!-- NAV BAR ENDED -->
+
+		<!-- SECTION FOR CONTENT -->
+		<div class="content">
+			<p>Passion &nbsp; Innovation &nbsp; Respect &nbsp; Leadership</p>
+		</div>
+		<!-- SECTION ENDED -->
+	</section>
+</body>
+</html>

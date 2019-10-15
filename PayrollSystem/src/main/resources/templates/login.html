@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Virusa | Login</title>
+	
+	<script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js}"></script>
+    <script type="text/javascript" src="../static/script/login.js" th:src="@{/scripts/login.js}"></script>
+   	<link href="../static/styles/login.css" th:href="@{/styles/login.css}" rel="stylesheet" />
+</head>
+<body>
+	<form id="form" th:action="@{/login}" method="post" style="margin-top: 250px;">
+		<div class="box">
+			<h1>Login</h1>
+
+			<input id="empid" type="text" name="username" placeholder="Emp id"
+				onFocus="field_focus(this, 'id');"
+				onblur="field_blur(this, 'id');" class="id" /> 
+				
+			<input
+				id="passwd" type="password" name="password" placeholder="password"
+				onFocus="field_focus(this, 'id');"
+				onblur="field_blur(this, 'id');" class="id" /> 
+				
+			<button class="btn" type="submit">Sign In</button>
+			<!-- End Btn -->
+
+
+			<button id="btn2" type="reset">Reset</button>
+			<!-- End Btn2 -->
+
+		</div>
+		<!-- End Box -->
+
+	</form>
+</body>
+</html>

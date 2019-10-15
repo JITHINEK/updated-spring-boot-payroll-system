@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>virtusa | Welcome</title>
+<script type="text/javascript" src="../static/jslib/node_modules/jquery/dist/jquery.js" th:src="@{jslib/node_modules/jquery/dist/jquery.js}"></script>
+<link type="text/css" rel="stylesheet" href="../static/styles/template.css" th:href="@{/styles/template.css}">
+<link type="text/css" rel="stylesheet" href="../static/styles/profile.css" th:href="@{/styles/profile.css}">
+</head>
+<body>
+	<!-- ASIDE FOR SIDE BAR  -->
+	<aside>
+		<h2>Hai!</h2>
+		<h2>[[${employeId}]]</h2>
+		<hr>
+		<ul>
+			<li><a href="/home">HOME</a></li>
+			<li><a href="/profile">PROFILE</a></li>
+			<li><a href="/editProfile">EDIT PROFILE</a></li>
+			<li><a href="/payslip">PAYSLIP</a></li>
+			<li><a href="/mboPayout">MBO PAYOUT</a></li>
+			<li><a href="/resetPassword">CHANGE PASSWORD</a></li>
+		</ul>
+	</aside>
+	<!-- SIDE BAR ENDED -->
+
+	<section>
+		<!-- HEADER FOR NAV BAR -->
+		<nav>
+			<img href="../static/images/virtusa-logo.png" th:src="@{/images/virtusa-logo.png}">
+			<p>
+				<a href="/declaration"><span>Forms</span></a><a href="/logout"><span>Log
+						out</span></a>
+			</p>
+		</nav>
+		<!-- NAV BAR ENDED -->
+
+		<!-- SECTION FOR CONTENT -->
+		<div class="content">
+			<fieldset>
+				<legend>
+					<h3>[[${profile.employeName}]]</h3>
+				</legend>
+				<div>
+					<fieldset>
+						<legend>Personal Details</legend>
+						<div>
+							<p>Emp Id: &nbsp [[${profile.employeId}]]</p>
+							<p>Emp Name: &nbsp [[${profile.employeName}]]</p>
+							<p>Email Id: &nbsp [[${profile.email}]]</p>
+							<p>Date of Join: &nbsp [[${profile.dateOfJoin}]]</p>
+							<p>Date of Birth: &nbsp [[${profile.dateOfBirth}]]</p>
+							<p>Designation: &nbsp [[${profile.designation}]]</p>
+							<p>Department: &nbsp [[${profile.department.departmentName}]]</p>
+						</div>
+					</fieldset>
+				</div>
+				<br>
+				<div>
+					<fieldset>
+						<legend>Identifecation Details</legend>
+						<div>
+							<p>Aadhar No: &nbsp [[${profile.aadhar}]]</p>
+							<p>Pan No: &nbsp [[${profile.panCardNo}]]</p>
+							<p>Mobile No: &nbsp [[${profile.mobileNo}]]</p>
+						</div>
+					</fieldset>
+				</div>
+				<br>
+				<div>
+					<fieldset>
+						<legend>Bank Details</legend>
+						<div>
+							<p>Bank Name: &nbsp [[${profile.bankAccount.bankName}]]</p>
+							<p>Acc No: &nbsp [[${profile.bankAccount.accNo}]]</p>
+							<p>IFSC Code: &nbsp [[${profile.bankAccount.ifscCode}]]</p>
+						</div>
+					</fieldset>
+				</div>
+				<br>
+				<div>
+					<fieldset>
+						<legend>Contact Details</legend>
+						<div>
+							<p>Door No: &nbsp [[${profile.address.doorNo}]]</p>
+							<p>City: &nbsp [[${profile.address.city}]]</p>
+							<p>Pin: &nbsp [[${profile.address.zipCode}]]</p>
+							<p>State: &nbsp [[${profile.address.state}]]</p>
+							<p>Country: &nbsp [[${profile.address.country}]]</p>
+						</div>
+					</fieldset>
+				</div>
+				<br>
+			</fieldset>
+		</div>
+		<!-- SECTION ENDED -->
+	</section>
+</body>
+</html>
